@@ -1,0 +1,53 @@
+/******************************************************************************
+ * Q. Write a Java class, Flower, that has three instance variables of type String,
+ * int, and float, which respectively represent the name of the flower, its number of petals, and price.
+ * Your class must include a constructor method that initialises each variable to an appropriate value,
+ * and your class should include methods for setting the value of each type, and getting the value of each type. 
+ * Create an array of 5 Flower objects and print the value.
+*******************************************************************************/
+import java.util.*;
+public class Flower
+{
+    private String name;
+    private int num;
+    private float price;
+    Flower(){
+        name="";
+        num=0;
+        price=0.0f;
+    }
+    public void setName(String name){
+        this.name=name;
+    }
+    public void setNum(int num){
+        this.num=num;
+    }
+    public void setPrice(float price){
+        this.price=price;
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public int getNum(){
+        return num;
+    }
+    public float getPrice(){
+        return price;
+    }
+    
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Flower a[]=new Main[5];
+		for(int i=0;i<5;i++){
+		    a[i]=new Flower();
+		    a[i].setPrice(sc.nextFloat());
+		    a[i].setNum(sc.nextInt());
+		    a[i].setName(sc.next());
+		    System.out.println(a[i].getName());
+		    System.out.println(a[i].getPrice());
+		    System.out.println(a[i].getNum());
+		}
+		
+	}
+}
