@@ -1,0 +1,33 @@
+/******************************************************************************
+ * Q. Consider an array MARKS[4][5] which stores the marks obtained by 4 students in 5 subjects. Now write a program to 
+(a) find the average marks obtained in each subject. 
+(b) find the average marks obtained by every student.         
+(c) find the number of students who have scored below 50 in their average.   
+(d) display the scores obtained by every student.
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int MARKS[][]=new int[4][5],cnt=0;
+		for(int i=0;i<4;i++){
+		    int sum_student=0;
+		    for(int j=0;j<5;j++){
+		        MARKS[i][j]=sc.nextInt();
+		        sum_student+=MARKS[i][j];
+		    }
+		    System.out.println("the total scores and average marks obtained by student no :" + (i+1) + " " + sum_student +" "+ (sum_student/5));
+		    if((sum_student/5) < 50){
+		        cnt++;
+		    }
+		}
+		for(int j=0;j<5;j++){
+		    int sum_subject=0;
+		    for(int i=0;i<4;i++){
+		        sum_subject+=MARKS[i][j];
+		    }
+		    System.out.println("average marks in subject no: " + (j+1));
+		}
+	}
+}
